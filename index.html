@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="image-box"><img class="logo" src="pictures/thisislogo.jpg"></div>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#socials">Contact</a></li>
+                    <img onclick="closemenu()" class="icons" src="https://img.icons8.com/?size=100&id=82764&format=png&color=F25081" height="20px" width="20px">
+
+                </ul>
+                <img class="icons" onclick="openmenu()" src="https://img.icons8.com/?size=100&id=8113&format=png&color=F25081" height="20px" width="20px">
+            </nav>
+            <div class="header-text">
+                <h1 class="naam">Hey, I'm <span>Aditi Patnaik</span></h1>
+                <p class="Aspiring">Aspiring Web Developer</p>
+
+            </div>
+        </div>
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="aboutimage">
+                        <img src="pictures/meri photo.jpg" alt="meri photo" class="meriphoto">
+                    </div>
+                    <div class="description">
+                        <h1 class="no">Get to know about me</h1>
+                        <p class="woah">Hey, I am Aditi Patnaik.I am a 1st year student pursuing B.tech in ECE.This is my very first semester and I am trying to understand the complexities of Web Development.
+                            
+                            <p class="tab-links active-link" onclick="opentab('exp')">Experience</p>
+                            <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                            
+                        </div>
+
+                        <div class="tab-contents active-tab" id="skills">
+                            <p class="woah">
+                                I lovee handlettering and<br>designing,that is why I am<br>interested in Web Development.<br>
+                                I know a good amount<br>of HTML and CSS.I am trying to learn<br>JavaScript now.
+
+                            </p>
+                        </div>
+                        
+                        <div class="tab-contents active-tab" id="exp">
+                            <p class="woah">
+                                It has been about three<br>steady weeks, since I've<br>started off.
+                            </p>
+
+                        </div>
+                    
+                    
+                    </div>
+
+
+
+                    
+                </div>
+
+            </div>
+
+        </div>
+        
+        
+
+    </div>
+
+
+    <script>
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        var tablinks = document.getElementsByClassName("tab-links");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+             for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+
+             }
+             event.currentTarget.classList.add("active-link");
+             document.getElementById(tabname).classList.add("active-tab");
+
+
+        }
+        
+    </script>
+
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+
+        function closemenu(){
+            sidemenu.style.right="-200px";
+
+            
+        }
+    </script>
+
+
+
+
+
+
+
+   
+        
+   
+</body>
+<footer>
+    <div class="footer">
+        <div class="survey">
+            <form action="#">
+                     <p class="NR">Enter your name</p>
+                    <label for="name"><input type="text" id="name"></input></label><br>
+                    <p class="NR">Please leave a review down below!</p>
+                    <label for="review"><input type="text" id="review"></input></label><br>
+                    <button type="submit">Submit</button>
+                
+            </form>
+        </div>
+        
+        
+        
+        
+        
+        <div id="socials">
+            <a href="https://www.instagram.com/dehydratedsince2007/"><img src="https://img.icons8.com/ios/50/instagram-new--v1.png" height="24" width="24" class="apps"></a>
+            <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQEdVg3ObuI2wQAAAZKMCkvQFV0dHubYOMBr8Q7Vpzuzo_A3buBbS9tjOSUkS-PdIejxTpZo1q_Y62Raot-ac78AP1v7cElVS0aPNKIjtE6KqBdDEhIHs5JMyJqNXgsbJw77uoc=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Faditi-patnaik-63390432b%3Futm_source%3Dshare%26utm_campaign%3Dshare_via%26utm_content%3Dprofile%26utm_medium%3Dandroid_app"><img src="https://img.icons8.com/material-rounded/24/linkedin--v1.png" height="24" width="24" class="apps"></a>
+            <a href="https://x.com/Aditi41220?t=eJzdBD0YVDtoR4CzIUXBbg&s=09"><img src="https://img.icons8.com/?size=100&id=437&format=png&color=000000" height="24" width="24" class="apps"></a>
+        </div>
+        
+    </div>
+</footer>
+
+
+</html>
